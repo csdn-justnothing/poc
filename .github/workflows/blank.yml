@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "COMMIT_MESSAGE=$(git log -1 --pretty=%s)" >> $GITHUB_ENV
+        run: echo "COMMIT_MESSAGE=$(git show -1 --pretty=format:"%B" -s)" >> $GITHUB_ENV
 
 
       # Runs a set of commands using the runners shell
